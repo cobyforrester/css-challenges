@@ -21,14 +21,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 10% auto auto auto;
-  width: 50%;
+  margin: 10% auto auto 15%;
 }
 
 .dynamic-content .phone {
   background-color: #f5f3f7;
-  width: 500px;
-  height: 650px;
+  width: 400px;
+  height: 690px;
   font-size: 15px;
   border-radius: 30px;
   border: 10px white solid;
@@ -156,6 +155,17 @@ body {
 }
 
 .dynamic-content .phone .phone-body .event-msg > span:first-child {
+  display: inline-block;
+  margin-left: right;
+  margin-right: 8px;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 1px grey solid;
+  border-radius: 50%;
+}
+
+.dynamic-content .phone .phone-body .event-msg > span:nth-child(2) {
   color: white;
   display: inline-block;
   margin-left: right;
@@ -168,19 +178,65 @@ body {
 }
 
 .dynamic-content .phone .phone-body .msg-input {
-  margin: 10px;
+  /* This bit sets up the horizontal layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid grey;
+  background-color: white;
   border-radius: 20px;
-  height: 30px;
-  padding-left: 10px;
+  padding: 8px;
+  margin: 5px 30px 5px 30px;
 }
 
-.dynamic-content .phone .phone-body .msg-input:focus {
+.dynamic-content .phone .phone-body .msg-input > input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: none;
+}
+
+.dynamic-content .phone .phone-body .msg-input > input:focus {
+  outline: none;
+}
+
+.dynamic-content .phone .phone-body .msg-input > button {
+  border: none;
+  background: lightblue;
+  color: white;
+  border-radius: 100px;
+}
+
+.dynamic-content .phone .phone-body .msg-input > button > span {
+  width: .09em;
+  height: .09em;
+  border: solid white;
+  border-width: 0 .15em .15em 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 13px 14px 11px 12px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.dynamic-content .phone .phone-body .msg-input > button:focus {
   outline: none;
 }
 
 .dynamic-content .simple-booking {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin: auto;
+  margin: auto auto auto 150px;
+  width: 500px;
+}
+
+.dynamic-content .simple-booking > h1 {
+  margin-bottom: 25px;
+}
+
+.dynamic-content .simple-booking > p {
+  line-height: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

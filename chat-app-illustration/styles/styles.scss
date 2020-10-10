@@ -15,8 +15,8 @@ body {
 
 // ######## Phone ########
 //General
-$phone-height: 650px;
-$phone-width: 500px;
+$phone-height: 690px;
+$phone-width: 400px;
 $phone-border-radius: 30px;
 $phone-border: 10px white solid;
 // Phone white top
@@ -28,14 +28,18 @@ $border-radius-msg-standard: 20px;
 $border-radius-msg-less: 8px;
 $msg-margin: 5px;
 
+// ###### Simple Booking #######
+$simple-booking-width: 500px;
+
 // ============== MIXINS ====================
 
 .dynamic-content {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin: 10% auto auto auto;
-  width: 50%;
+  margin: 10% auto auto 15%;
+  
+  // PHONE SECTION
   .phone {
     background-color: hsl(270, 20%, 96%);
     width: $phone-width;
@@ -134,7 +138,20 @@ $msg-margin: 5px;
         margin: $msg-margin;
         margin-right: auto;
         width: 70%;
+
+        // for circle in event msg
         & > span:first-child {
+          display: inline-block;
+          margin-left: right;
+          margin-right: 8px;
+          height: 17px;
+          width: 17px;
+          background-color: transparent;
+          border: 1px grey solid;
+          border-radius: 50%;
+        }
+        // walk time
+        & > span:nth-child(2) {
           color: white;
           display: inline-block;
           margin-left: right;
@@ -146,19 +163,56 @@ $msg-margin: 5px;
         }
       }
       .msg-input {
-        margin: 10px;
-        border-radius: 20px;
-        height: 30px;
-        padding-left: 10px;
-        &:focus{
-          outline: none;
-      }
+
+          /* This bit sets up the horizontal layout */
+          display:flex;
+          flex-direction:row;
+          border:1px solid grey;
+          background-color: white;
+          border-radius: 20px;
+          padding:8px;
+          margin: 5px 30px 5px 30px;
+          & > input {
+            flex-grow:2;         
+            border:none;
+            &:focus{
+              outline: none;
+          }
+        }
+        & > button {
+          border: none;
+          background:lightblue;
+          color:white;
+          border-radius: 100px;
+          & > span {
+              width: .09em;
+              height: .09em;
+              border: solid white;
+              border-width: 0 .15em .15em 0;
+              display: inline-block;
+              padding: 3px;
+              margin: 13px 14px 11px 12px;
+              transform: rotate(-45deg);
+          }
+          &:focus{
+            outline: none;
+        }
+        }
       }
     }
   }
+
+  // SIMPLE BOOKING SECTION
   .simple-booking {
-    flex-basis: 100%;
-    margin: auto;
+
+    margin: auto auto auto 150px;
+    width: $simple-booking-width;
+    & > h1 {
+      margin-bottom: 25px;
+    }
+    & > p {
+      line-height: 30px;
+    }
   }
   
 }
