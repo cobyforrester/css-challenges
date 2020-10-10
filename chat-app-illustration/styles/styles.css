@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: wheat;
+}
+
+.dynamic-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 10% auto auto auto;
+  width: 50%;
+}
+
+.dynamic-content .phone {
+  background-color: #25c7b1;
+  width: 350px;
+  height: 500px;
+  border-radius: 30px;
+  border: 10px white solid;
+}
+
+.dynamic-content .phone .phone-top {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(purple), to(pink));
+  background-image: linear-gradient(to right, purple, pink);
+}
+
+.dynamic-content .phone .phone-top .white-at-top-of-phone {
+  width: 50%;
+  height: 20px;
+  background-color: white;
+  margin: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.dynamic-content .phone .phone-top .phone-top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+}
+
+.dynamic-content .phone .phone-top .phone-top-content img {
+  height: 40px;
+  border-radius: 30px;
+  border: 2px white solid;
+}
+
+.dynamic-content .phone .phone-top .phone-top-content .arrow-left {
+  width: .09em;
+  height: .09em;
+  border: solid white;
+  border-width: 0 .125em .125em 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 16px 0 0 0;
+  -webkit-transform: rotate(130deg) skewX(-13deg);
+          transform: rotate(130deg) skewX(-13deg);
+}
+
+.dynamic-content .phone .phone-top .phone-top-content .phone-top-three-dots {
+  margin-left: auto;
+}
+
+.dynamic-content .phone .phone-top .phone-top-content .phone-top-three-dots:after {
+  content: '\2807';
+}
+
+.dynamic-content .simple-booking {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: auto;
+}
+/*# sourceMappingURL=styles.css.map */

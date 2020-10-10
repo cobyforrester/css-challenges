@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  background-color: wheat;
+}
+
+// ============ Variables ==============
+
+// ######## Phone ########
+//General
+$phone-height: 500px;
+$phone-width: 350px;
+$phone-border-radius: 30px;
+$phone-border: 10px white solid;
+// Phone white top
+$phone-white-top-top-border-radius: 18px;
+$phone-white-top-bottom-border-radius: 8px;
+
+.dynamic-content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 10% auto auto auto;
+  width: 50%;
+  .phone {
+    background-color: rgb(37, 199, 177);
+    width: $phone-width;
+    height: $phone-height;
+    
+    border-radius: $phone-border-radius;
+    border: $phone-border;
+    .phone-top {
+      border-top-left-radius: $phone-white-top-top-border-radius;
+      border-top-right-radius: $phone-white-top-top-border-radius;
+      border-bottom-left-radius: $phone-white-top-bottom-border-radius;
+      border-bottom-right-radius: $phone-white-top-bottom-border-radius;
+      color: white;
+      background-image: linear-gradient(to right, purple, pink);
+
+      .white-at-top-of-phone {
+        width: 50%;
+        height: 20px;
+        background-color: white;
+        margin: auto;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
+      .phone-top-content {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        img {
+          height: 40px;
+          border-radius: 30px;
+          border: 2px white solid;
+        }
+        .arrow-left {
+          width: .09em;
+          height: .09em;
+          border: solid white;
+          border-width: 0 .125em .125em 0;
+          display: inline-block;
+          padding: 3px;
+          margin: 16px 0 0 0;
+          transform: rotate(130deg) skewX(-13deg);
+        }
+        .phone-top-three-dots {
+          margin-left: auto;
+          &:after {
+            content: '\2807';
+          }
+        }
+      }
+    }
+  }
+  .simple-booking {
+    flex-basis: 100%;
+    margin: auto;
+  }
+  
+}
+
