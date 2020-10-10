@@ -15,13 +15,20 @@ body {
 
 // ######## Phone ########
 //General
-$phone-height: 500px;
-$phone-width: 350px;
+$phone-height: 650px;
+$phone-width: 500px;
 $phone-border-radius: 30px;
 $phone-border: 10px white solid;
 // Phone white top
 $phone-white-top-top-border-radius: 18px;
 $phone-white-top-bottom-border-radius: 8px;
+
+// phone body
+$border-radius-msg-standard: 20px;
+$border-radius-msg-less: 8px;
+$msg-margin: 5px;
+
+// ============== MIXINS ====================
 
 .dynamic-content {
   display: flex;
@@ -30,9 +37,10 @@ $phone-white-top-bottom-border-radius: 8px;
   margin: 10% auto auto auto;
   width: 50%;
   .phone {
-    background-color: rgb(37, 199, 177);
+    background-color: hsl(270, 20%, 96%);
     width: $phone-width;
     height: $phone-height;
+    font-size: 15px;
     
     border-radius: $phone-border-radius;
     border: $phone-border;
@@ -78,6 +86,73 @@ $phone-white-top-bottom-border-radius: 8px;
             content: '\2807';
           }
         }
+      }
+    }
+    .phone-body {
+      display: flex;
+      flex-direction: column;
+      & > * {
+        display: inline-block;
+
+      }
+      .grey-background-msg {
+        background-color: pink;
+        border-radius: $border-radius-msg-standard;
+        border-bottom-left-radius: $border-radius-msg-less;
+        padding: 10px;
+        margin: $msg-margin;
+        margin-right: auto;
+        width: 50%;
+      }
+      .dog-images {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        margin: $msg-margin;
+        margin-left: auto;
+        & > img {
+          margin: auto;
+          height: 50px;
+          border-radius: 12px;
+        }
+      }
+      .white-background-msg {
+        background-color: lightgreen;
+        border-radius: $border-radius-msg-standard;
+        border-bottom-right-radius: $border-radius-msg-less;
+        padding: 10px;
+        margin: $msg-margin;
+        margin-left: auto;
+        width: 50%;
+      }
+      .event-msg {
+        background-color: lightseagreen;
+        display: flex;
+        border-radius: $border-radius-msg-standard;
+        border-bottom-left-radius: $border-radius-msg-less;
+        padding: 10px;
+        margin: $msg-margin;
+        margin-right: auto;
+        width: 70%;
+        & > span:first-child {
+          color: white;
+          display: inline-block;
+          margin-left: right;
+        }
+        & > span:last-child {
+          text-align: end;
+          display: inline-block;
+          margin-left: auto;
+        }
+      }
+      .msg-input {
+        margin: 10px;
+        border-radius: 20px;
+        height: 30px;
+        padding-left: 10px;
+        &:focus{
+          outline: none;
+      }
       }
     }
   }

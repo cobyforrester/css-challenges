@@ -26,9 +26,10 @@ body {
 }
 
 .dynamic-content .phone {
-  background-color: #25c7b1;
-  width: 350px;
-  height: 500px;
+  background-color: #f5f3f7;
+  width: 500px;
+  height: 650px;
+  font-size: 15px;
   border-radius: 30px;
   border: 10px white solid;
 }
@@ -86,6 +87,95 @@ body {
 
 .dynamic-content .phone .phone-top .phone-top-content .phone-top-three-dots:after {
   content: '\2807';
+}
+
+.dynamic-content .phone .phone-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dynamic-content .phone .phone-body > * {
+  display: inline-block;
+}
+
+.dynamic-content .phone .phone-body .grey-background-msg {
+  background-color: pink;
+  border-radius: 20px;
+  border-bottom-left-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  margin-right: auto;
+  width: 50%;
+}
+
+.dynamic-content .phone .phone-body .dog-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60%;
+  margin: 5px;
+  margin-left: auto;
+}
+
+.dynamic-content .phone .phone-body .dog-images > img {
+  margin: auto;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.dynamic-content .phone .phone-body .white-background-msg {
+  background-color: lightgreen;
+  border-radius: 20px;
+  border-bottom-right-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  margin-left: auto;
+  width: 50%;
+}
+
+.dynamic-content .phone .phone-body .event-msg {
+  background-color: lightseagreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  border-bottom-left-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  margin-right: auto;
+  width: 70%;
+}
+
+.dynamic-content .phone .phone-body .event-msg > span:first-child {
+  color: white;
+  display: inline-block;
+  margin-left: right;
+}
+
+.dynamic-content .phone .phone-body .event-msg > span:last-child {
+  text-align: end;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.dynamic-content .phone .phone-body .msg-input {
+  margin: 10px;
+  border-radius: 20px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.dynamic-content .phone .phone-body .msg-input:focus {
+  outline: none;
 }
 
 .dynamic-content .simple-booking {
