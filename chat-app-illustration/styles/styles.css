@@ -94,6 +94,7 @@ body {
   border-radius: 30px;
   border: .18em white solid;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .arrow-left {
@@ -106,6 +107,7 @@ body {
   margin: 11px 6px 0 8px;
   -webkit-transform: rotate(125deg) skewX(-25deg);
           transform: rotate(125deg) skewX(-25deg);
+  cursor: pointer;
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots {
@@ -114,6 +116,7 @@ body {
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots:after {
+  cursor: pointer;
   content: '\2807';
 }
 
@@ -197,6 +200,10 @@ body {
   border-radius: 50px;
 }
 
+.dynamic-content > .phone > .phone-body > .event-msg > span:first-child:hover {
+  background-color: white;
+}
+
 .dynamic-content > .phone > .phone-body > .event-msg > span:nth-child(2) {
   color: white;
   display: inline-block;
@@ -268,6 +275,7 @@ body {
   color: white;
   border-radius: 100px;
   margin-right: 2px;
+  cursor: pointer;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > button > span {
