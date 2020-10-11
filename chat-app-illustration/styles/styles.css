@@ -8,7 +8,7 @@ body {
   font-family: 'Rubik', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: wheat;
+  background-color: #f5f3f7;
 }
 
 .dynamic-content {
@@ -21,16 +21,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 5% auto auto 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dynamic-content > .phone {
   background-color: #f5f3f7;
   width: 305px;
-  height: 625px;
+  height: 627px;
   font-size: 11px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  margin: 7% 8% 4% 8%;
   border-radius: 35px;
   border: 12px white solid;
 }
@@ -61,7 +67,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 15px 10px 10px 10px;
+  padding: 15px 10px 15px 10px;
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-text > .phone-name {
@@ -72,7 +78,7 @@ body {
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-text > .phone-status {
   font-size: 10px;
-  opacity: .3;
+  color: #d89eff;
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > img {
@@ -96,7 +102,7 @@ body {
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots {
   margin: 5px 5px auto auto;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots:after {
@@ -115,15 +121,15 @@ body {
 
 .dynamic-content > .phone > .phone-body > * {
   display: inline-block;
+  margin: 12px 8px 0 8px;
 }
 
 .dynamic-content > .phone > .phone-body > .grey-background-msg {
   background-color: #ebe1f2;
   color: #9241c8;
-  border-radius: 14px;
-  border-bottom-left-radius: 8px;
+  border-radius: 12px;
+  border-bottom-left-radius: 6px;
   padding: 10px;
-  margin: 5px;
   margin-right: auto;
   width: 50%;
 }
@@ -137,25 +143,24 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 60%;
-  margin: 5px;
   margin-left: auto;
+  margin-top: 20px;
 }
 
 .dynamic-content > .phone > .phone-body > .dog-images > img {
   margin: auto;
-  height: 50px;
+  height: 49px;
   border-radius: 12px;
 }
 
 .dynamic-content > .phone > .phone-body > .white-background-msg {
   background-color: white;
   color: #6e5d7e;
-  border-radius: 14px;
-  border-bottom-right-radius: 8px;
+  border-radius: 12px;
+  border-bottom-right-radius: 6px;
   padding: 10px;
-  margin: 5px;
   margin-left: auto;
-  width: 50%;
+  max-width: 50%;
 }
 
 .dynamic-content > .phone > .phone-body > .event-msg {
@@ -164,29 +169,29 @@ body {
   display: flex;
   background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
   background-image: linear-gradient(to right, #e942ff, #8838ff);
-  border-radius: 14px;
-  border-bottom-left-radius: 8px;
+  border-radius: 12px;
+  border-bottom-left-radius: 6px;
   padding: 10px;
-  margin: 5px;
+  height: 23px;
   margin-right: auto;
-  width: 70%;
+  width: 65%;
 }
 
 .dynamic-content > .phone > .phone-body > .event-msg > span:first-child {
   display: inline-block;
-  margin-left: right;
-  margin-right: 8px;
+  margin: 2px 9px auto 0;
   height: 13px;
   width: 13px;
-  background: transparent !important;
+  background: transparent;
   border: 2px #e570ff solid;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
 .dynamic-content > .phone > .phone-body > .event-msg > span:nth-child(2) {
   color: white;
   display: inline-block;
-  margin-left: right;
+  margin: 5px auto auto 0;
+  opacity: .8;
 }
 
 .dynamic-content > .phone > .phone-body > .event-msg > span:last-child {
@@ -196,6 +201,7 @@ body {
   text-align: end;
   display: inline-block;
   margin-left: auto;
+  padding: 3px 8px 0 0;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input {
@@ -207,9 +213,10 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 5px;
-  margin: 5px 18px 5px 18px;
+  width: 90%;
+  margin: 20px auto auto auto;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > input {
@@ -217,6 +224,8 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border: none;
+  padding-top: 4px;
+  padding-left: 8.5%;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > input:focus {
@@ -225,18 +234,22 @@ body {
 
 .dynamic-content > .phone > .phone-body > .msg-input > input::-webkit-input-placeholder {
   color: #c6cacd;
+  font-size: .9em;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > input:-ms-input-placeholder {
   color: #c6cacd;
+  font-size: .9em;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > input::-ms-input-placeholder {
   color: #c6cacd;
+  font-size: .9em;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > input::placeholder {
   color: #c6cacd;
+  font-size: .9em;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > button {
@@ -244,6 +257,7 @@ body {
   background: #3e2753;
   color: white;
   border-radius: 100px;
+  margin-right: 2px;
 }
 
 .dynamic-content > .phone > .phone-body > .msg-input > button > span {
@@ -264,15 +278,46 @@ body {
 }
 
 .dynamic-content > .simple-booking {
-  margin: auto auto auto 150px;
-  width: 500px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-width: 600px;
 }
 
 .dynamic-content > .simple-booking > h1 {
-  margin-bottom: 25px;
+  margin-bottom: 34px;
+  font-size: 3.3em;
+  font-weight: 500;
+  color: #3e2753;
 }
 
 .dynamic-content > .simple-booking > p {
-  line-height: 30px;
+  line-height: 35px;
+  font-size: 21px;
+  color: #a39daa;
+}
+
+@media only screen and (max-width: 940px) {
+  .dynamic-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .phone {
+    margin-bottom: 70px !important;
+  }
+  .simple-booking {
+    text-align: center;
+    margin-bottom: 70px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .simple-booking > p {
+    margin: auto;
+    max-width: 400px !important;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

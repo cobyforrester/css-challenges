@@ -8,14 +8,14 @@
 body {
   font-family: 'Rubik', sans-serif;
   box-sizing: border-box;
-  background-color: wheat;
+  background-color: hsl(270, 20%, 96%);
 }
 
 // ============ Variables ==============
 
 // ######## Phone ########
 //General
-$phone-height: 625px;
+$phone-height: 627px;
 $phone-width: 305px;
 $phone-border-radius: 35px;
 $phone-border: 12px white solid;
@@ -24,19 +24,22 @@ $phone-top-top-border-radius: 25px;
 $phone-top-bottom-border-radius: 8px;
 
 // phone body
-$border-radius-msg-standard: 14px;
-$border-radius-msg-less: 8px;
-$msg-margin: 5px;
+$border-radius-msg-standard: 12px;
+$border-radius-msg-less: 6px;
+$msg-margin-top: 12px;
+$msg-margin-sides: 8px;
 
 // ###### Simple Booking #######
-$simple-booking-width: 500px;
+$simple-booking-width: 600px;
 
 
 .dynamic-content {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin: 5% auto auto 15%;
+  align-items: center;
+  justify-content: center;
+
   
   // PHONE SECTION
   & > .phone {
@@ -45,6 +48,7 @@ $simple-booking-width: 500px;
     height: $phone-height;
     font-size: 11px;
     flex-shrink: 0;
+    margin: 7% 8% 4% 8%;
     
     border-radius: $phone-border-radius;
     border: $phone-border;
@@ -68,7 +72,7 @@ $simple-booking-width: 500px;
       & > .phone-top-content {
         display: flex;
         justify-content: flex-start;
-        padding: 15px 10px 10px 10px;
+        padding: 15px 10px 15px 10px;
         & > .phone-top-text {
           & > .phone-name {
             font-size: 15px;
@@ -77,7 +81,7 @@ $simple-booking-width: 500px;
           }
           & > .phone-status {
             font-size: 10px;
-            opacity: .3;
+            color: hsl(276, 100%, 81%);
           }
         }
         & > img {
@@ -99,7 +103,7 @@ $simple-booking-width: 500px;
         }
         & > .phone-top-three-dots {
           margin: 5px 5px auto auto;
-          font-size: 18px;
+          font-size: 16px;
           &:after {
             content: '\2807';
           }
@@ -111,6 +115,7 @@ $simple-booking-width: 500px;
       flex-direction: column;
       & > * {
         display: inline-block;
+        margin: $msg-margin-top $msg-margin-sides 0 $msg-margin-sides;
       }
 
       & > .grey-background-msg {
@@ -119,7 +124,6 @@ $simple-booking-width: 500px;
         border-radius: $border-radius-msg-standard;
         border-bottom-left-radius: $border-radius-msg-less;
         padding: 10px;
-        margin: $msg-margin;
         margin-right: auto;
         width: 50%;
       }
@@ -127,11 +131,11 @@ $simple-booking-width: 500px;
         display: flex;
         flex-direction: row;
         width: 60%;
-        margin: $msg-margin;
         margin-left: auto;
+        margin-top: $msg-margin-top + 8px;
         & > img {
           margin: auto;
-          height: 50px;
+          height: 49px;
           border-radius: 12px;
         }
       }
@@ -141,9 +145,8 @@ $simple-booking-width: 500px;
         border-radius: $border-radius-msg-standard;
         border-bottom-right-radius: $border-radius-msg-less;
         padding: 10px;
-        margin: $msg-margin;
         margin-left: auto;
-        width: 50%;
+        max-width: 50%;
       }
       & > .event-msg {
         display: flex;
@@ -151,26 +154,26 @@ $simple-booking-width: 500px;
         border-radius: $border-radius-msg-standard;
         border-bottom-left-radius: $border-radius-msg-less;
         padding: 10px;
-        margin: $msg-margin;
+        height: 23px;
         margin-right: auto;
-        width: 70%;
+        width: 65%;
 
         // for radio btn in event msg
         & > span:first-child {
           display: inline-block;
-          margin-left: right;
-          margin-right: 8px;
+          margin: 2px 9px auto 0 ;
           height: 13px;
           width: 13px;
-          background: transparent !important;
+          background: transparent;
           border: 2px hsl(289, 100%, 72%) solid;
-          border-radius: 50%;
+          border-radius: 50px;
         }
         // walk time
         & > span:nth-child(2) {
           color: white;
           display: inline-block;
-          margin-left: right;
+          margin: 5px auto auto 0;
+          opacity: .8;
         }
         & > span:last-child {
           color: white;
@@ -179,23 +182,28 @@ $simple-booking-width: 500px;
           text-align: end;
           display: inline-block;
           margin-left: auto;
+          padding: 3px 8px 0 0;
         }
       }
       & > .msg-input {
           display:flex;
           flex-direction:row;
           background-color: white;
-          border-radius: 20px;
+          border-radius: 25px;
           padding:5px;
-          margin: 5px 18px 5px 18px;
+          width: 90%;
+          margin: $msg-margin-top + 8px auto auto auto;
           & > input {
             flex-grow:1;         
             border:none;
+            padding-top: 4px;
+            padding-left: 8.5%;
             &:focus{
               outline: none;
           }
           &::placeholder {
             color: hsl(206, 6%, 79%);
+            font-size: .9em;
           }
         }
         & > button {
@@ -203,6 +211,7 @@ $simple-booking-width: 500px;
           background: hsl(271, 36%, 24%);
           color:white;
           border-radius: 100px;
+          margin-right: 2px;
           & > span {
               width: .09em;
               height: .09em;
@@ -224,16 +233,39 @@ $simple-booking-width: 500px;
 
   // SIMPLE BOOKING SECTION
   & > .simple-booking {
-
-    margin: auto auto auto 150px;
-    width: $simple-booking-width;
+    flex-basis: 100%;
+    max-width: $simple-booking-width;
     & > h1 {
-      margin-bottom: 25px;
+      margin-bottom: 34px;
+      font-size: 3.3em;
+      font-weight: 500;
+      color: hsl(271, 36%, 24%);
     }
     & > p {
-      line-height: 30px;
+      line-height: 35px;
+      font-size: 21px;
+      color: hsl(270, 7%, 64%);
     }
   }
   
 }
 
+
+@media only screen and (max-width: 940px) {
+  .dynamic-content {
+    flex-wrap: wrap;
+  }
+  .phone {
+    margin-bottom: 70px !important;
+  }
+  .simple-booking {
+    text-align: center;
+    margin-bottom: 70px !important;
+    display: flex;
+    flex-direction: column;
+    & > p {
+      margin: auto;
+      max-width: 400px !important;
+    }
+  }
+}
