@@ -15,92 +15,107 @@ body {
 
 // ######## Phone ########
 //General
-$phone-height: 690px;
-$phone-width: 400px;
-$phone-border-radius: 30px;
-$phone-border: 10px white solid;
+$phone-height: 625px;
+$phone-width: 305px;
+$phone-border-radius: 35px;
+$phone-border: 12px white solid;
 // Phone white top
-$phone-white-top-top-border-radius: 18px;
-$phone-white-top-bottom-border-radius: 8px;
+$phone-top-top-border-radius: 25px;
+$phone-top-bottom-border-radius: 8px;
 
 // phone body
-$border-radius-msg-standard: 20px;
+$border-radius-msg-standard: 14px;
 $border-radius-msg-less: 8px;
 $msg-margin: 5px;
 
 // ###### Simple Booking #######
 $simple-booking-width: 500px;
 
-// ============== MIXINS ====================
 
 .dynamic-content {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin: 10% auto auto 15%;
+  margin: 5% auto auto 15%;
   
   // PHONE SECTION
-  .phone {
+  & > .phone {
     background-color: hsl(270, 20%, 96%);
     width: $phone-width;
     height: $phone-height;
-    font-size: 15px;
+    font-size: 11px;
+    flex-shrink: 0;
     
     border-radius: $phone-border-radius;
     border: $phone-border;
-    .phone-top {
-      border-top-left-radius: $phone-white-top-top-border-radius;
-      border-top-right-radius: $phone-white-top-top-border-radius;
-      border-bottom-left-radius: $phone-white-top-bottom-border-radius;
-      border-bottom-right-radius: $phone-white-top-bottom-border-radius;
+    & > .phone-top {
+      border-top-left-radius: $phone-top-top-border-radius;
+      border-top-right-radius: $phone-top-top-border-radius;
+      border-bottom-left-radius: $phone-top-bottom-border-radius;
+      border-bottom-right-radius: $phone-top-bottom-border-radius;
       color: white;
-      background-image: linear-gradient(to right, purple, pink);
+      background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
 
-      .white-at-top-of-phone {
-        width: 50%;
-        height: 20px;
+      & > .white-at-top-of-phone {
+        width: 60%;
+        height: 22px;
         background-color: white;
         margin: auto;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
       }
 
-      .phone-top-content {
+      & > .phone-top-content {
         display: flex;
         justify-content: flex-start;
-        padding: 10px;
-        img {
-          height: 40px;
+        padding: 15px 10px 10px 10px;
+        & > .phone-top-text {
+          & > .phone-name {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 1px;
+          }
+          & > .phone-status {
+            font-size: 10px;
+            opacity: .3;
+          }
+        }
+        & > img {
+          height: 25px;
           border-radius: 30px;
-          border: 2px white solid;
+          border: .2em white solid;
+          margin-right: 15px;
         }
-        .arrow-left {
-          width: .09em;
-          height: .09em;
+        & > .arrow-left {
+          width: .01em;
+          height: .01em;
           border: solid white;
-          border-width: 0 .125em .125em 0;
+          //border-radius: 2px;
+          border-width: 0 .27em .27em 0;
           display: inline-block;
-          padding: 3px;
-          margin: 16px 0 0 0;
-          transform: rotate(130deg) skewX(-13deg);
+          padding: .19em;
+          margin: 11px 8px 0 8px;
+          transform: rotate(125deg) skewX(-25deg);
         }
-        .phone-top-three-dots {
-          margin-left: auto;
+        & > .phone-top-three-dots {
+          margin: 5px 5px auto auto;
+          font-size: 18px;
           &:after {
             content: '\2807';
           }
         }
       }
     }
-    .phone-body {
+    & > .phone-body {
       display: flex;
       flex-direction: column;
       & > * {
         display: inline-block;
-
       }
-      .grey-background-msg {
-        background-color: pink;
+
+      & > .grey-background-msg {
+        background-color: rgb(235, 225, 242);
+        color: hsl(276, 55%, 52%);
         border-radius: $border-radius-msg-standard;
         border-bottom-left-radius: $border-radius-msg-less;
         padding: 10px;
@@ -108,7 +123,7 @@ $simple-booking-width: 500px;
         margin-right: auto;
         width: 50%;
       }
-      .dog-images {
+      & > .dog-images {
         display: flex;
         flex-direction: row;
         width: 60%;
@@ -120,8 +135,9 @@ $simple-booking-width: 500px;
           border-radius: 12px;
         }
       }
-      .white-background-msg {
-        background-color: lightgreen;
+      & > .white-background-msg {
+        background-color: white;
+        color: hsl(271, 15%, 43%);
         border-radius: $border-radius-msg-standard;
         border-bottom-right-radius: $border-radius-msg-less;
         padding: 10px;
@@ -129,9 +145,9 @@ $simple-booking-width: 500px;
         margin-left: auto;
         width: 50%;
       }
-      .event-msg {
-        background-color: lightseagreen;
+      & > .event-msg {
         display: flex;
+        background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
         border-radius: $border-radius-msg-standard;
         border-bottom-left-radius: $border-radius-msg-less;
         padding: 10px;
@@ -139,15 +155,15 @@ $simple-booking-width: 500px;
         margin-right: auto;
         width: 70%;
 
-        // for circle in event msg
+        // for radio btn in event msg
         & > span:first-child {
           display: inline-block;
           margin-left: right;
           margin-right: 8px;
-          height: 17px;
-          width: 17px;
-          background-color: transparent;
-          border: 1px grey solid;
+          height: 13px;
+          width: 13px;
+          background: transparent !important;
+          border: 2px hsl(289, 100%, 72%) solid;
           border-radius: 50%;
         }
         // walk time
@@ -157,41 +173,45 @@ $simple-booking-width: 500px;
           margin-left: right;
         }
         & > span:last-child {
+          color: white;
+          font-size: 15px;
+          font-weight: 700;
           text-align: end;
           display: inline-block;
           margin-left: auto;
         }
       }
-      .msg-input {
-
-          /* This bit sets up the horizontal layout */
+      & > .msg-input {
           display:flex;
           flex-direction:row;
-          border:1px solid grey;
           background-color: white;
           border-radius: 20px;
-          padding:8px;
-          margin: 5px 30px 5px 30px;
+          padding:5px;
+          margin: 5px 18px 5px 18px;
           & > input {
-            flex-grow:2;         
+            flex-grow:1;         
             border:none;
             &:focus{
               outline: none;
           }
+          &::placeholder {
+            color: hsl(206, 6%, 79%);
+          }
         }
         & > button {
           border: none;
-          background:lightblue;
+          background: hsl(271, 36%, 24%);
           color:white;
           border-radius: 100px;
           & > span {
               width: .09em;
               height: .09em;
+              border-radius: 3px;
               border: solid white;
-              border-width: 0 .15em .15em 0;
+              border-width: 0 .29em .29em 0;
               display: inline-block;
-              padding: 3px;
-              margin: 13px 14px 11px 12px;
+              padding: .19em;
+              margin: 10px 12px 9px 10px;
               transform: rotate(-45deg);
           }
           &:focus{
@@ -203,7 +223,7 @@ $simple-booking-width: 500px;
   }
 
   // SIMPLE BOOKING SECTION
-  .simple-booking {
+  & > .simple-booking {
 
     margin: auto auto auto 150px;
     width: $simple-booking-width;

@@ -21,74 +21,89 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 10% auto auto 15%;
+  margin: 5% auto auto 15%;
 }
 
-.dynamic-content .phone {
+.dynamic-content > .phone {
   background-color: #f5f3f7;
-  width: 400px;
-  height: 690px;
-  font-size: 15px;
-  border-radius: 30px;
-  border: 10px white solid;
+  width: 305px;
+  height: 625px;
+  font-size: 11px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 35px;
+  border: 12px white solid;
 }
 
-.dynamic-content .phone .phone-top {
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+.dynamic-content > .phone > .phone-top {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(purple), to(pink));
-  background-image: linear-gradient(to right, purple, pink);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(to right, #8838ff, #e942ff);
 }
 
-.dynamic-content .phone .phone-top .white-at-top-of-phone {
-  width: 50%;
-  height: 20px;
+.dynamic-content > .phone > .phone-top > .white-at-top-of-phone {
+  width: 60%;
+  height: 22px;
   background-color: white;
   margin: auto;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
-.dynamic-content .phone .phone-top .phone-top-content {
+.dynamic-content > .phone > .phone-top > .phone-top-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 10px;
+  padding: 15px 10px 10px 10px;
 }
 
-.dynamic-content .phone .phone-top .phone-top-content img {
-  height: 40px;
+.dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-text > .phone-name {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-text > .phone-status {
+  font-size: 10px;
+  opacity: .3;
+}
+
+.dynamic-content > .phone > .phone-top > .phone-top-content > img {
+  height: 25px;
   border-radius: 30px;
-  border: 2px white solid;
+  border: .2em white solid;
+  margin-right: 15px;
 }
 
-.dynamic-content .phone .phone-top .phone-top-content .arrow-left {
-  width: .09em;
-  height: .09em;
+.dynamic-content > .phone > .phone-top > .phone-top-content > .arrow-left {
+  width: .01em;
+  height: .01em;
   border: solid white;
-  border-width: 0 .125em .125em 0;
+  border-width: 0 .27em .27em 0;
   display: inline-block;
-  padding: 3px;
-  margin: 16px 0 0 0;
-  -webkit-transform: rotate(130deg) skewX(-13deg);
-          transform: rotate(130deg) skewX(-13deg);
+  padding: .19em;
+  margin: 11px 8px 0 8px;
+  -webkit-transform: rotate(125deg) skewX(-25deg);
+          transform: rotate(125deg) skewX(-25deg);
 }
 
-.dynamic-content .phone .phone-top .phone-top-content .phone-top-three-dots {
-  margin-left: auto;
+.dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots {
+  margin: 5px 5px auto auto;
+  font-size: 18px;
 }
 
-.dynamic-content .phone .phone-top .phone-top-content .phone-top-three-dots:after {
+.dynamic-content > .phone > .phone-top > .phone-top-content > .phone-top-three-dots:after {
   content: '\2807';
 }
 
-.dynamic-content .phone .phone-body {
+.dynamic-content > .phone > .phone-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,13 +113,14 @@ body {
           flex-direction: column;
 }
 
-.dynamic-content .phone .phone-body > * {
+.dynamic-content > .phone > .phone-body > * {
   display: inline-block;
 }
 
-.dynamic-content .phone .phone-body .grey-background-msg {
-  background-color: pink;
-  border-radius: 20px;
+.dynamic-content > .phone > .phone-body > .grey-background-msg {
+  background-color: #ebe1f2;
+  color: #9241c8;
+  border-radius: 14px;
   border-bottom-left-radius: 8px;
   padding: 10px;
   margin: 5px;
@@ -112,7 +128,7 @@ body {
   width: 50%;
 }
 
-.dynamic-content .phone .phone-body .dog-images {
+.dynamic-content > .phone > .phone-body > .dog-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,15 +141,16 @@ body {
   margin-left: auto;
 }
 
-.dynamic-content .phone .phone-body .dog-images > img {
+.dynamic-content > .phone > .phone-body > .dog-images > img {
   margin: auto;
   height: 50px;
   border-radius: 12px;
 }
 
-.dynamic-content .phone .phone-body .white-background-msg {
-  background-color: lightgreen;
-  border-radius: 20px;
+.dynamic-content > .phone > .phone-body > .white-background-msg {
+  background-color: white;
+  color: #6e5d7e;
+  border-radius: 14px;
   border-bottom-right-radius: 8px;
   padding: 10px;
   margin: 5px;
@@ -141,12 +158,13 @@ body {
   width: 50%;
 }
 
-.dynamic-content .phone .phone-body .event-msg {
-  background-color: lightseagreen;
+.dynamic-content > .phone > .phone-body > .event-msg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  border-radius: 14px;
   border-bottom-left-radius: 8px;
   padding: 10px;
   margin: 5px;
@@ -154,31 +172,33 @@ body {
   width: 70%;
 }
 
-.dynamic-content .phone .phone-body .event-msg > span:first-child {
+.dynamic-content > .phone > .phone-body > .event-msg > span:first-child {
   display: inline-block;
   margin-left: right;
   margin-right: 8px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-  border: 1px grey solid;
+  height: 13px;
+  width: 13px;
+  background: transparent !important;
+  border: 2px #e570ff solid;
   border-radius: 50%;
 }
 
-.dynamic-content .phone .phone-body .event-msg > span:nth-child(2) {
+.dynamic-content > .phone > .phone-body > .event-msg > span:nth-child(2) {
   color: white;
   display: inline-block;
   margin-left: right;
 }
 
-.dynamic-content .phone .phone-body .event-msg > span:last-child {
+.dynamic-content > .phone > .phone-body > .event-msg > span:last-child {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
   text-align: end;
   display: inline-block;
   margin-left: auto;
 }
 
-.dynamic-content .phone .phone-body .msg-input {
-  /* This bit sets up the horizontal layout */
+.dynamic-content > .phone > .phone-body > .msg-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,57 +206,73 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid grey;
   background-color: white;
   border-radius: 20px;
-  padding: 8px;
-  margin: 5px 30px 5px 30px;
+  padding: 5px;
+  margin: 5px 18px 5px 18px;
 }
 
-.dynamic-content .phone .phone-body .msg-input > input {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+.dynamic-content > .phone > .phone-body > .msg-input > input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: none;
 }
 
-.dynamic-content .phone .phone-body .msg-input > input:focus {
+.dynamic-content > .phone > .phone-body > .msg-input > input:focus {
   outline: none;
 }
 
-.dynamic-content .phone .phone-body .msg-input > button {
+.dynamic-content > .phone > .phone-body > .msg-input > input::-webkit-input-placeholder {
+  color: #c6cacd;
+}
+
+.dynamic-content > .phone > .phone-body > .msg-input > input:-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.dynamic-content > .phone > .phone-body > .msg-input > input::-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.dynamic-content > .phone > .phone-body > .msg-input > input::placeholder {
+  color: #c6cacd;
+}
+
+.dynamic-content > .phone > .phone-body > .msg-input > button {
   border: none;
-  background: lightblue;
+  background: #3e2753;
   color: white;
   border-radius: 100px;
 }
 
-.dynamic-content .phone .phone-body .msg-input > button > span {
+.dynamic-content > .phone > .phone-body > .msg-input > button > span {
   width: .09em;
   height: .09em;
+  border-radius: 3px;
   border: solid white;
-  border-width: 0 .15em .15em 0;
+  border-width: 0 .29em .29em 0;
   display: inline-block;
-  padding: 3px;
-  margin: 13px 14px 11px 12px;
+  padding: .19em;
+  margin: 10px 12px 9px 10px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.dynamic-content .phone .phone-body .msg-input > button:focus {
+.dynamic-content > .phone > .phone-body > .msg-input > button:focus {
   outline: none;
 }
 
-.dynamic-content .simple-booking {
+.dynamic-content > .simple-booking {
   margin: auto auto auto 150px;
   width: 500px;
 }
 
-.dynamic-content .simple-booking > h1 {
+.dynamic-content > .simple-booking > h1 {
   margin-bottom: 25px;
 }
 
-.dynamic-content .simple-booking > p {
+.dynamic-content > .simple-booking > p {
   line-height: 30px;
 }
 /*# sourceMappingURL=styles.css.map */
