@@ -4,11 +4,16 @@
   margin: 0;
   padding: 0;
 }
+html { 
+  height: 100%;
+}
 
 body {
   font-family: 'Rubik', sans-serif;
   box-sizing: border-box;
   background-color: hsl(270, 20%, 96%);
+  position: relative;
+  height: 100%;
 }
 
 // ============ Variables ==============
@@ -48,7 +53,8 @@ $simple-booking-width: 600px;
     height: $phone-height;
     font-size: 11px;
     flex-shrink: 0;
-    margin: 7% 8% 4% 8%;
+    margin: 3% 8% 4% 8%;
+    box-shadow: 6px 12px 60px -30px rgb(71, 71, 71);
     
     border-radius: $phone-border-radius;
     border: $phone-border;
@@ -85,10 +91,10 @@ $simple-booking-width: 600px;
           }
         }
         & > img {
-          height: 25px;
+          height: 26px;
           border-radius: 30px;
-          border: .2em white solid;
-          margin-right: 15px;
+          border: .18em white solid;
+          margin-right: 12px;
         }
         & > .arrow-left {
           width: .01em;
@@ -98,7 +104,7 @@ $simple-booking-width: 600px;
           border-width: 0 .27em .27em 0;
           display: inline-block;
           padding: .19em;
-          margin: 11px 8px 0 8px;
+          margin: 11px 6px 0 8px;
           transform: rotate(125deg) skewX(-25deg);
         }
         & > .phone-top-three-dots {
@@ -147,6 +153,7 @@ $simple-booking-width: 600px;
         padding: 10px;
         margin-left: auto;
         max-width: 50%;
+        box-shadow: 0 12px 15px -13px rgb(175, 175, 175);
       }
       & > .event-msg {
         display: flex;
@@ -250,13 +257,43 @@ $simple-booking-width: 600px;
   
 }
 
+// Background shapes
+.left-background-shape {
+  height: 85vh;
+  width: 67vh;
+  left: -100px;
+  background-image: linear-gradient(45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  position: fixed;
+  z-index: -1;
+  border-bottom-left-radius: 30em;
+  border-bottom-right-radius: 40em;
+}
 
+
+// Background shapes
+.right-background-shape {
+  height: 85vh;
+  width: 80vh;
+  right: -300px;
+  bottom: 0;
+  background-color: rgb(244, 237, 245);
+  position: fixed;
+  z-index: -1;
+  border-top-left-radius: 30em;
+  border-top-right-radius: 40em;
+  overflow:hidden
+}
+
+
+
+// media query for collapse
 @media only screen and (max-width: 940px) {
   .dynamic-content {
     flex-wrap: wrap;
   }
   .phone {
     margin-bottom: 70px !important;
+    margin-top: 70px !important;
   }
   .simple-booking {
     text-align: center;
@@ -267,5 +304,56 @@ $simple-booking-width: 600px;
       margin: auto;
       max-width: 400px !important;
     }
+  }
+  .left-background-shape {
+    height: 66vh; //57
+    border-bottom-right-radius: 150em;
+  }
+  .right-background-shape {
+    width: 80vh;
+    border-top-left-radius: 150em;
+  }
+}
+
+
+// media queries for background images
+@media only screen and (max-width: 1524px) {
+  .left-background-shape { 
+    width: 60vh;
+  }
+  .right-background-shape {
+    height: 75vh;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .left-background-shape { 
+    width: 50vh;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .left-background-shape { 
+    width: 45vh;
+  }
+  .right-background-shape {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .right-background-shape {
+    height: 30vh;
+    width: 80vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .left-background-shape { 
+    width: 35vh;
+  }
+  .right-background-shape {
+    height: 30vh;
+    width: 75vh;
   }
 }
